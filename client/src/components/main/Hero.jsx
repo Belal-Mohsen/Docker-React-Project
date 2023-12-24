@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="flex-1 flex justify-center items-center p-4">
                 <motion.img
                     src="/mainIconsdark.svg"
-                    className="w-full h-auto"
+                    className="w-3/4 h-auto"
                     alt="main icon"
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
