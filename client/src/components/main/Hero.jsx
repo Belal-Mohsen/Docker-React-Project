@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import SocialMediaIcons from '../sub/SocialMediaIcons';
 
 const Hero = () => {
-
     return (
         <motion.div
             className="flex flex-col md:flex-row items-center justify-around h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black"
@@ -14,7 +13,7 @@ const Hero = () => {
                     animate={{ y: 0 }}
                     transition={{ type: "spring", stiffness: 50, damping: 5 }}
                 >
-                    Hello, I'm Belal
+                    Hello, I&apos;m Belal
                 </motion.h1>
                 <motion.div
                     className="text-xl md:text-2xl text-white my-4 flex items-center"
