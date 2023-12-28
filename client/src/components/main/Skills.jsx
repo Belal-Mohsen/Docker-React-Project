@@ -1,42 +1,92 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import SkillsIcons from '../../utils/skillsIcons';
+import {
+    Backend_skill,
+    Frontend_skill,
+    Full_stack,
+    Other_skill,
+    Skill_data,
+} from '../../utils/SkillsData'
+
+import SkillDataProvider from '../sub/SkillsDataProvider'
+
 
 const Skills = () => {
-    const [ref, inView] = useInView({
-        // triggerOnce: true,
-        threshold: 0.2 // Adjust as needed
-    });
-
-    const variants = {
-        hidden: (index) => ({
-            opacity: 0,
-            x: -50 - index * 30,
-            y: -50 - index * 30
-        }),
-        visible: (index) => ({
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: {
-                delay: index * 0.1
-            }
-        })
-    };
-
     return (
-        <div ref={ref} className="flex flex-wrap h-screen mx-15 gap-4 p-4 bg-gradient-to-br from-gray-800 via-gray-900 to-black">
-            {SkillsIcons.map((skill, index) => (
-                <motion.div
-                    key={skill.id}
-                    custom={index}
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                    variants={variants}
-                >
-                    <img src={skill.icon} alt={skill.name} className="h-12 w-12 mb-2" />
-                </motion.div>
-            ))}
+        <div
+            className="flex flex-col items-center gap-6 md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6"
+        >
+            <div className='text-[30px] text-white font-medium text-center mb-[15px] mt-16 text-lg'>
+                Building softwares with modern tools
+            </div>
+            <div className="flex flex-row justify-around flex-wrap mt-28 gap-5 items-center">
+                {Skill_data.map((image, index) => (
+                    <SkillDataProvider
+                        key={index}
+                        src={image.Image}
+                        width={image.width}
+                        height={image.height}
+                        index={index}
+                    />
+                ))}
+            </div>
+
+            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+                {Frontend_skill.map((image, index) => (
+                    <SkillDataProvider
+                        key={index}
+                        src={image.Image}
+                        width={image.width}
+                        height={image.height}
+                        index={index}
+                    />
+                ))}
+            </div>
+            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+                {Backend_skill.map((image, index) => (
+                    <SkillDataProvider
+                        key={index}
+                        src={image.Image}
+                        width={image.width}
+                        height={image.height}
+                        index={index}
+                    />
+                ))}
+            </div>
+            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+                {Full_stack.map((image, index) => (
+                    <SkillDataProvider
+                        key={index}
+                        src={image.Image}
+                        width={image.width}
+                        height={image.height}
+                        index={index}
+                    />
+                ))}
+            </div>
+            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+                {Other_skill.map((image, index) => (
+                    <SkillDataProvider
+                        key={index}
+                        src={image.Image}
+                        width={image.width}
+                        height={image.height}
+                        index={index}
+                    />
+                ))}
+            </div>
+
+            <div className="w-full h-full absolute">
+                <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+                    <video
+                        className="w-full h-auto"
+                        preload="false"
+                        playsInline
+                        loop
+                        muted
+                        autoPlay
+                        src="/cards-video.webm"
+                    />
+                </div>
+            </div>
         </div>
     );
 };
