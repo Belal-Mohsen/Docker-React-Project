@@ -5,10 +5,10 @@ const ProjectCard = ({ image, title, description, tools }) => {
     return (
         <div className="relative w-full md:w-1/4">
             <motion.div
-                className="w-full h-96 rounded-[30px] bg-transparent border border-orange-200 overflow-hidden hover:shadow-2xl"
+                className="w-full h-[700px] rounded-[30px] bg-slate-700/50 overflow-hidden hover:shadow-2xl"
                 whileHover={{ scale: 1.05 }}
             >
-                <img className="w-full h-40" src={image} alt={title} />
+                <img className="h-60 w-full rounded-[30px]" src={image} alt={title} />
                 <div className="px-6 py-4">
                     <div className="text-white font-bold text-xl mb-2">{title}</div>
                     <p className="text-white text-base">

@@ -4,7 +4,7 @@ import SocialMediaIcons from '../sub/SocialMediaIcons';
 const Hero = () => {
     return (
         <motion.div
-            className="flex flex-col md:flex-row items-center justify-around h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black"
+            className="flex flex-col md:flex-row gap-6 md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6"
         >
             <div className="flex-1 flex flex-col md:ml-12 items-start justify-center p-4">
                 <motion.h1
@@ -46,6 +46,21 @@ const Hero = () => {
                     transition={{ ease: "easeOut", duration: 1 }}
                 />
             </div>
+
+            <div className="w-full h-full absolute">
+                <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+                    <video
+                        className="w-full h-auto"
+                        preload="false"
+                        playsInline
+                        loop
+                        muted
+                        autoPlay
+                        src="/bg3-s.mp4"
+                    />
+                </div>
+            </div>
+
         </motion.div>
     );
 };

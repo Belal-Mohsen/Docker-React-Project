@@ -31,31 +31,31 @@ const Navbar = () => {
                 onMouseEnter={(e) => handleHover(e, true)}
                 onMouseLeave={(e) => handleHover(e, false)}>
                 <FaHome style={iconStyle} />
-                <span className="text-xs">Home</span>
+                <span className="text-xs text-white">Home</span>
             </Link>
             <Link to="about" smooth={true} duration={500} className="flex flex-col items-center"
                 onMouseEnter={(e) => handleHover(e, true)}
                 onMouseLeave={(e) => handleHover(e, false)}>
                 <FaUser style={iconStyle} />
-                <span className="text-xs">About</span>
+                <span className="text-xs text-white">About</span>
             </Link>
             <Link to="skills" smooth={true} duration={500} className="flex flex-col items-center"
                 onMouseEnter={(e) => handleHover(e, true)}
                 onMouseLeave={(e) => handleHover(e, false)}>
                 <FaCode style={iconStyle} />
-                <span className="text-xs">Skills</span>
+                <span className="text-xs text-white">Skills</span>
             </Link>
             <Link to="projects" smooth={true} duration={500} className="flex flex-col items-center"
                 onMouseEnter={(e) => handleHover(e, true)}
                 onMouseLeave={(e) => handleHover(e, false)}>
                 <FaBriefcase style={iconStyle} />
-                <span className="text-xs">Projects</span>
+                <span className="text-xs text-white">Projects</span>
             </Link>
             <Link to="contact" smooth={true} duration={500} className="flex flex-col items-center"
                 onMouseEnter={(e) => handleHover(e, true)}
                 onMouseLeave={(e) => handleHover(e, false)}>
                 <FaEnvelope style={iconStyle} />
-                <span className="text-xs">Contact</span>
+                <span className="text-xs text-white">Contact</span>
             </Link>
         </div>
     );

@@ -14,7 +14,7 @@ const Skills = () => {
         <div
             className="flex flex-col items-center gap-6 md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6"
         >
-            <div className='text-[30px] text-white font-medium text-center mb-[15px] mt-16 text-lg'>
+            <div className='text-[30px] text-white font-medium text-center mb-[15px] mt-16 md:text-lg'>
                 Building softwares with modern tools
             </div>
             <div className="flex flex-row justify-around flex-wrap mt-28 gap-5 items-center">
