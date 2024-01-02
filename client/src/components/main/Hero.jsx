@@ -28,6 +28,19 @@ const Hero = () => {
                     <span>Problem Solver</span>
                 </motion.div>
                 <motion.div
+                    className="text-xl md:text-2xl text-white my-4 flex items-center mb-8 text-justify"
+                    initial={{ y: 100 }}
+                    animate={{ y: 0 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
+                >
+                    Software Developer and AI Researcher from Montreal.
+                    With expertise in machine learning, deep learning, and software development,
+                    I have contributed to both industry and academia.
+                    My passion for technology is driven
+                    by a constant pursuit of innovation and
+                    excellence in the ever-evolving world of computing.
+                </motion.div>
+                <motion.div
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
                     transition={{ ease: "easeOut", duration: 1 }}>
@@ -36,7 +49,7 @@ const Hero = () => {
 
             </div>
 
-            <div className="flex-1 flex justify-center items-center p-4">
+            <div className="hidden flex-1 md:flex justify-center items-center p-4">
                 <motion.img
                     src="/mainIconsdark.svg"
                     className="w-3/4 h-auto"

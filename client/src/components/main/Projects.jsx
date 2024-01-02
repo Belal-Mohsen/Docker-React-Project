@@ -36,7 +36,7 @@ const Projects = () => {
                         loop
                         muted
                         autoPlay
-                        src="/bg3.mp4"
+                        src="/bg3-s.mp4"
                     />
                 </div>
             </div>
