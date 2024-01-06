@@ -1,7 +1,23 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SocialMediaIcons from '../sub/SocialMediaIcons';
+import axios from 'axios';
 
 const Hero = () => {
+
+
+    useEffect(() => {
+        // just for testing
+        axios.get('http://localhost:5000/test')
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+            });
+    }, []);
+
+
     return (
         <motion.div
             className="flex flex-col md:flex-row gap-6 md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6"
