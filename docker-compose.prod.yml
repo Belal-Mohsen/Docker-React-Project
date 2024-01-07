@@ -2,6 +2,7 @@ version: "3.8"
 services:
   app:
     build: .
+    image: myportfolio:latest
     ports:
       - "5000:5000"
     restart: always
