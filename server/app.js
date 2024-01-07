@@ -1,38 +1,32 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-
-
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-// For testing
-app.get('/', async (req, res) => {
-    res.status(200).json({
-        message: 'Hello from the server',
-    });
+app.use(express.static(path.join(__dirname, 'dist')));
+
+app.get('/api', async (req, res) => {
+    res.status(200).json({ message: 'Hello from the server' });
 });
 
-app.get('/test', async (req, res) => {
-    console.log('test end-point from the server!')
-    res.status(200).json({
-        message: 'test end-point from the server!',
-    });
+app.get('/api/test', async (req, res) => {
+    res.status(200).json({ message: 'Test endpoint from the server!' });
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
-const startServer = async () => {
-    try {
-        app.listen(PORT, '0.0.0.0', () => console.log(`Server started on port ${PORT}`));
-    } catch (error) {
-        console.log(error);
-    }
-};
-
-startServer();
+app.listen(PORT, '0.0.0.0', () => console.log(`Server started on port ${PORT}`));

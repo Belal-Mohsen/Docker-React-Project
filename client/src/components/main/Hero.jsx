@@ -8,7 +8,7 @@ const Hero = () => {
 
     useEffect(() => {
         // just for testing
-        axios.get('http://localhost:5000/test')
+        axios.get('/api/test')
             .then(response => {
                 console.log(response.data);
             })
