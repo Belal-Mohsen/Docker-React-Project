@@ -26,7 +26,7 @@ const About = () => {
 
                     <TabPanel value="1">
                         <div className='text-white'>
-                            Your engaging bio goes here.
+                            This is to test my changes
                         </div>
                     </TabPanel>
 
