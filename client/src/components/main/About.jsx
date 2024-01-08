@@ -32,7 +32,7 @@ const About = () => {
 
                     <TabPanel value="2">
                         <div className='text-white'>
-                            Educational milestones and icons/graphics.
+                            Educational milestones and icons/graphics/changes
                         </div>
                     </TabPanel>
                     <TabPanel value="3">
