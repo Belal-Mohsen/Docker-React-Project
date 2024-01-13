@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import apiRouter from './api.js';
 
 dotenv.config();
 
@@ -24,6 +25,10 @@ app.get('/api', async (req, res) => {
 app.get('/api/test', async (req, res) => {
     res.status(200).json({ message: 'Test endpoint from the server!' });
 });
+
+app.use('/api', apiRouter);
+
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
