@@ -17,16 +17,12 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'dist')));
-
-app.get('/api', async (req, res) => {
-    res.status(200).json({ message: 'Hello from the server' });
-});
+app.use('/api', apiRouter);
 
 app.get('/api/test', async (req, res) => {
     res.status(200).json({ message: 'Test endpoint from the server!' });
 });
 
-app.use('/api', apiRouter);
 
 
 

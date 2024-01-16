@@ -3,6 +3,7 @@ import axios from 'axios';
 import Timeline from '../sub/Timeline';
 import { Box, Tab, Tabs } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
+import GitHubInfo from '../sub/GitHubInfo';
 
 const About = () => {
     const [value, setValue] = useState('1');
@@ -37,22 +38,22 @@ const About = () => {
 
 
     return (
-        <div className="flex flex-col md:flex-row md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6">
-            <div className="m-10 md:w-1/4">
+        <div className="flex flex-col md:flex-row md:h-screen md:justify-between w-full overflow-hidden bg-[#080712] scale-100 pb-6">
+            <div className="m-10 md:w-1/4 md:ml-40 md:mt-48">
                 <img src="/mainIconsdark.svg" alt="Belal" className="w-full h-auto object-cover" />
             </div>
-            <div className="md:w-1/2 m-4 md:mt-20">
+            <div className="md:w-1/2 m-4 pr-16 md:mt-48">
                 <TabContext value={value}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList onChange={handleChange} aria-label="About Me Tabs">
                             <Tab label="Who Am I" value="1" sx={{ color: 'white', '&.Mui-selected': { color: 'white' } }} />
                             <Tab label="Education" value="2" sx={{ color: 'white', '&.Mui-selected': { color: 'white' } }} />
-                            <Tab label="Blog" value="3" sx={{ color: 'white', '&.Mui-selected': { color: 'white' } }} />
+                            <Tab label="Coding Commitments" value="3" sx={{ color: 'white', '&.Mui-selected': { color: 'white' } }} />
                         </TabList>
                     </Box>
 
                     <TabPanel value="1">
-                        <div className='text-white text-justify md:text-lg'>
+                        <div className='text-white text-justify md:text-lg md:mr-40'>
                             Belal is a motivated and detail-oriented software developer,
                             passionate about solving complex problems through coding. With a keen interest in dynamic
                             development projects, he seeks to enhance his experience in software development.
@@ -74,11 +75,7 @@ const About = () => {
                     </TabPanel>
                     <TabPanel value="3">
                         <div className='text-white'>
-                            {/* {tweets.map(tweet => (
-                                <div key={tweet.id}>
-                                    <p>{tweet.text}</p>
-                                </div>
-                            ))} */}
+                            <GitHubInfo />
                         </div>
                     </TabPanel>
                 </TabContext>

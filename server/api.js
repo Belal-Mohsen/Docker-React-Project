@@ -4,9 +4,9 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const router = express.Router();
+const apiRouter = express.Router();
 
-app.get('/api/commitCount', async (req, res) => {
+apiRouter.get('/commitCount', async (req, res) => {
     const username = 'Belal-Mohsen';
     const token = process.env.GITHUB_TOKEN;
 
@@ -48,4 +48,4 @@ app.get('/api/commitCount', async (req, res) => {
     }
 });
 
-export default router;
+export default apiRouter;
