@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
-const ProjectCard = ({ image, title, description, tools }) => {
+const ProjectCard = ({ image, title, description, tools, gitHubLink }) => {
     return (
         <div className="relative w-full md:w-1/4">
             <motion.div
@@ -21,7 +21,7 @@ const ProjectCard = ({ image, title, description, tools }) => {
                     ))}
                 </div>
             </motion.div>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="absolute bottom-0 right-0 p-4">
+            <a href={gitHubLink} target="_blank" rel="noopener noreferrer" className="absolute bottom-0 right-0 p-4">
                 <FaGithub size={30} style={{ color: 'white' }} />
             </a>
         </div>

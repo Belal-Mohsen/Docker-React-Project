@@ -39,10 +39,15 @@ const About = () => {
 
     return (
         <div className="flex flex-col md:flex-row md:h-screen md:justify-between w-full overflow-hidden bg-[#080712] scale-100 pb-6">
-            <div className="m-10 md:w-1/4 md:ml-40 md:mt-48">
-                <img src="/mainIconsdark.svg" alt="Belal" className="w-full h-auto object-cover" />
+            <div className="m-10 md:w-1/4 md:ml-40 md:mt-40">
+                <img
+                    src="/PI2.jpg"
+                    alt="Belal"
+                    className="w-full h-auto object-cover opacity-75 hover:opacity-100 transition-opacity duration-500 rounded-[35px]"
+
+                />
             </div>
-            <div className="md:w-1/2 m-4 pr-16 md:mt-48">
+            <div className="md:w-1/2 m-4 pr-16 md:mt-40">
                 <TabContext value={value}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList onChange={handleChange} aria-label="About Me Tabs">
@@ -53,7 +58,7 @@ const About = () => {
                     </Box>
 
                     <TabPanel value="1">
-                        <div className='text-white text-justify md:text-lg md:mr-40'>
+                        <div className='text-white text-justify md:text-lg md:mr-40 mt-9'>
                             Belal is a motivated and detail-oriented software developer,
                             passionate about solving complex problems through coding. With a keen interest in dynamic
                             development projects, he seeks to enhance his experience in software development.
@@ -66,15 +71,23 @@ const About = () => {
                             with a Master&apos;s in Computer Engineering and a high GPA, complemented by several honors
                             and awards.
                         </div>
+                        <a href="./Belal_Mohsen_CV.pdf" download="Belal_CV">
+                            <button
+                                className="bg-white text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-full py-2 mt-5 motion-safe:animate-bounce px-16"
+                            >
+                                CV
+                            </button>
+                        </a>
                     </TabPanel>
 
                     <TabPanel value="2">
-                        <div className='text-white'>
+                        <div className='text-white mt-9'>
                             <Timeline data={educationData} />
                         </div>
                     </TabPanel>
                     <TabPanel value="3">
                         <div className='text-white'>
+                            <p className='text-[20px] font-semibold'>In 2023 (Repos, Commits and Collaborations): </p>
                             <GitHubInfo />
                         </div>
                     </TabPanel>
