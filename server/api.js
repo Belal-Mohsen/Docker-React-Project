@@ -8,7 +8,7 @@ const apiRouter = express.Router();
 
 apiRouter.get('/commitCount', async (req, res) => {
     const username = 'Belal-Mohsen';
-    const token = process.env.GITHUB_TOKEN;
+    const token = process.env.API_TOKEN;
 
     try {
         const userResponse = await axios.get(`https://api.github.com/users/${username}`, {

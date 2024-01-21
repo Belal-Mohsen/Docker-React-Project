@@ -1,7 +1,14 @@
 version: "3.8"
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_TEMPLATE_ID: $VITE_APP_TEMPLATE_ID
+        VITE_APP_SERVICE_ID: $VITE_APP_SERVICE_ID
+        VITE_APP_PUBLIC_KEY: $VITE_APP_PUBLIC_KEY
+        GITHUB_TOKEN: $GITHUB_TOKEN
     image: myportfolio:latest
     ports:
       - "5000:5000"
