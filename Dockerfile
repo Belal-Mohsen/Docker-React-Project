@@ -22,10 +22,10 @@ WORKDIR /server
 COPY server/ ./
 
 # Define build-time variable for server
-ARG GITHUB_TOKEN
+ARG API_TOKEN
 
 # Set it as an environment variable
-ENV GITHUB_TOKEN=$GITHUB_TOKEN
+ENV API_TOKEN=$API_TOKEN
 
 RUN npm install
 COPY --from=client-build /app/dist /server/dist

@@ -22,7 +22,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build with Docker Compose
-        run: docker-compose -f docker-compose.prod.yml build --build-arg VITE_APP_TEMPLATE_ID=${{ secrets.VITE_APP_TEMPLATE_ID }} --build-arg VITE_APP_SERVICE_ID=${{ secrets.VITE_APP_SERVICE_ID }} --build-arg VITE_APP_PUBLIC_KEY=${{ secrets.VITE_APP_PUBLIC_KEY }} --build-arg GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+        run: docker-compose -f docker-compose.prod.yml build \
+          --build-arg VITE_APP_TEMPLATE_ID=${{ secrets.VITE_APP_TEMPLATE_ID }} \
+          --build-arg VITE_APP_SERVICE_ID=${{ secrets.VITE_APP_SERVICE_ID }} \
+          --build-arg VITE_APP_PUBLIC_KEY=${{ secrets.VITE_APP_PUBLIC_KEY }} \
+          --build-arg API_TOKEN=${{ secrets.API_TOKEN }}
 
       - name: Tag the Docker Image
         run: docker tag myportfolio:latest belalmohsen/reactjs:latest
