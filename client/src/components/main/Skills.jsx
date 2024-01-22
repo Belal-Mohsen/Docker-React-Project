@@ -15,7 +15,7 @@ const Skills = () => {
             className="flex flex-col items-center gap-6 md:h-screen w-full overflow-hidden bg-[#080712] scale-100 pb-6"
         >
             <div className='text-[30px] md:text-[50px] text-white font-medium text-center mb-[15px] mt-16 md:text-lg'>
-                Building softwares with modern tools
+                Building Softwares With Modern Tools
             </div>
             <div className="flex flex-row justify-around flex-wrap mt-28 gap-5 items-center">
                 {Skill_data.map((image, index) => (

@@ -19,7 +19,7 @@ export const Skill_data = [
     },
     {
         skill_name: "Azur",
-        Image: "/azur.png",
+        Image: "/azure.png",
         width: 65,
         height: 65,
     },
@@ -51,8 +51,8 @@ export const Skill_data = [
     {
         skill_name: "numpy",
         Image: "/numpy.png",
-        width: 80,
-        height: 80,
+        width: 120,
+        height: 120,
     },
     {
         skill_name: "Framer Motion",
@@ -75,8 +75,8 @@ export const Skill_data = [
     {
         skill_name: "django",
         Image: "/django.png",
-        width: 40,
-        height: 40,
+        width: 80,
+        height: 80,
     },
 
 ];
