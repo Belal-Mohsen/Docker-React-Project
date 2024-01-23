@@ -10,7 +10,7 @@ No authentication is required for users to access the endpoint.
 
 # End-Point:
 
-`api/commitscount`
+`/api/commitCount`
 
 # Response:
 
