@@ -20,7 +20,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/api', apiRouter);
 
 app.get('/api/test', async (req, res) => {
-    res.status(200).json({ message: 'Test endpoint from the server!' });
+    res.status(200).json({ message: 'Test endpoint from the server!' }
+    );
 });
 
 
